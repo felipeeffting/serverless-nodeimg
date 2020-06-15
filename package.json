@@ -1,0 +1,18 @@
+{
+  "name": "nodeimg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "optimize.js",
+  "dependencies": {
+    "sharp": "^0.25.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "predeploy": "rd /s node_modules/sharp && npm install --platform=linux --arch=x64 --target=8.10.0 sharp",
+    "deploy": "serverless deploy -v",
+    "postdeploy": "rd /s node_modules/sharp && npm install sharp"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
